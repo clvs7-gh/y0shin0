@@ -1,0 +1,73 @@
+# CORE SYSTEM CONFIG
+main:
+  # LOG CONFIGS
+  show_log: true
+  # SOUL CARD CONFIG
+  soul_card:
+    uid: '44556677'
+  # CARD CONFIGS
+  cards:
+    - name: 'test1'
+      uid: '00112233'
+    - name: 'test2'
+      uid: 'aabbccdd'
+
+##### CORE PLUGINS #####
+
+# TWINTAIL PLUGIN CONFIGS
+twintail:
+  active: false
+
+# REDIS PLUGIN CONFIGS
+redis:
+  active: false
+  #:path: '/tmp/redis.sock'
+  host: '127.0.0.1'
+  port: 6379
+
+# NFC PLUGIN CONFIGS
+nfc:
+  active: false
+  timeout: 10
+  max_try: 32
+
+# GPIO PLUGIN CONFIGS
+gpio:
+  active: false
+  pins:
+    led_eye_left: 32
+    led_eye_right: 33
+    led_eye_left_sub: 29
+    led_eye_right_sub: 31
+    led_battery_low: 7
+    led_others:
+      - 37
+      - 38
+    vibrator: 36
+
+# SOUND PLUGIN CONFIGS
+sound:
+  active: false
+  sounds:
+    - trigger: 'mode_changed'
+      file: 'mode_chg.wav'
+  voices:
+    # test1
+    - file: 'test_a.wav'
+      event: 'nfc'
+      mode: 1
+      card: 'test1'
+    - file: 'test_b.wav'
+      event: 'nfc'
+      mode: 2
+      card: 'test1'
+    # test2
+    - file: 'test2_a.wav'
+      event: 'nfc'
+      mode: 1
+      card: 'test2'
+    - file: 'test2_b.wav'
+      event: 'nfc'
+      mode: 2
+      card: 'test2'
+

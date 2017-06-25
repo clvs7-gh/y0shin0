@@ -1,0 +1,2 @@
+source 'https://rubygems.org'
+gem 'nfc', '>= 3.1.1'
