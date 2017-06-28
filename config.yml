@@ -71,3 +71,10 @@ sound:
       mode: 2
       card: 'test2'
 
+# BATTERY PLUGIN CONFIGS
+battery:
+  active: false
+  low_threshold: 3300
+  address: 0x68
+  sensor_value_write: 0x88
+
