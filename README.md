@@ -8,7 +8,7 @@ To run this application, some ICs are needed.
 Details are coming soon.
 
 ### Status
-Client side (this repository) is almost OK for the time being, so I'm currently develop the server side applications.
+Client side (this repository) is almost OK for the time being, so I'm currently developing the server side applications.
 
 ### LICENSE
 See "LICENSE" file for this one (MIT License).
