@@ -25,6 +25,6 @@ begin
     sleep 0.01
   end
 rescue Interrupt
-  Plugin.instances.each { |i| i.finalize if i.methods.include? 'finalize' }
+  Plugin.instances.each { |i| i.finalize if (defined? i.finalize) != nil }
   Plugin[:nfc].stop_fork if Y0shin0::CoreConfig.is_plugin_active :nfc
 end
